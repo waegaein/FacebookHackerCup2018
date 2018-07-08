@@ -1,14 +1,12 @@
 import sys
-import filehandler as fh
+from util.utility import Utility
 
 class Solution:
     def __init__(self):
-        self.inputReader = fh.InputReader('input')
+        self.util = Utility('input')
 
     def p1(self):
         print('p1')
-        strings = self.inputReader.readFile('tourist_example_input.txt')
-        print(strings)
 
     def p2(self):
         print('p2')
