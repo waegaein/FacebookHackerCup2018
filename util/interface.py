@@ -1,11 +1,11 @@
-from . filehandler import InputReader
-from . inputparser import InputParser
+from .filehandler import InputReader
+from .inputparser import InputParser
 
-class Utility:
+class UtilityInterface:
     def __init__(self, inputDir):
         self.inputReader = InputReader('input')
         self.inputParser = InputParser()
 
-    def p1(self):
+    def qrP1(self):
         strings = self.inputReader.readFile('tourist_example_input.txt')
-        self.inputParser.parseP1()
+        self.inputParser.parseQrP1(strings)

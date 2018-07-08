@@ -2,11 +2,12 @@ class InputParser:
     def __init__(self):
         print('init')
 
-    def parseP1(self):
+    def parseQrP1(self, src):
         print('parseP1')
+        print(src);
 
-    def parseP2(self):
+    def parseQrP2(self):
         print('parseP2')
 
-    def parseP3(self):
+    def parseQrP3(self):
         print('parseP3')
