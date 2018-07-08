@@ -5,4 +5,5 @@ class InputReader:
     def readFile(self, fileName):
         path = self.inputDir + '/' + fileName
         f = open(path, 'r')
-        print(f.read())
+        lines = list(map(lambda x: x.replace('\n', ''), f.readlines()))
+        return lines
