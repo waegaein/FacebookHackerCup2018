@@ -9,6 +9,7 @@ if __name__ == '__main__':
         sol = None
     else:
         print('Invalid Argument: Round')
+        
     prob = sys.argv[2]
     if prob == '1':
         sol.p1()
