@@ -4,8 +4,6 @@ class UtilityInterface:
     def __init__(self, round):
         self.fileHandler = FileHandler(round)
 
-    # QualificationRound
-    # Problem1
     def readInput(self, probName):
         return self.fileHandler.readFile('input/' + probName + '_example_input.txt')
 
