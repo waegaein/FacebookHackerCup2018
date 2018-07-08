@@ -6,8 +6,10 @@ class InputParser:
         print('parseP1')
         print(src);
 
-    def parseQrP2(self):
+    def parseQrP2(self, src):
         print('parseP2')
+        print(src);
 
-    def parseQrP3(self):
+    def parseQrP3(self, src):
         print('parseP3')
+        print(src);
