@@ -1,5 +1,4 @@
 import sys
-
 from QualificationRound.solution import Solution as qrSol;
 
 if __name__ == '__main__':
