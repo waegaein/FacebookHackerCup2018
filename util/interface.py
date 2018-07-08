@@ -1,35 +1,23 @@
 from .filehandler import *
-from .inputparser import InputParser
 
 class UtilityInterface:
     def __init__(self, round):
         self.fileHandler = FileHandler(round)
-        self.inputParser = InputParser()
+
     # QualificationRound
     # Problem1
-    def prepareQrP1(self):
-        strings = self.fileHandler.readFile('input/tourist_example_input.txt')
-        self.inputParser.parseQrP1(strings)
-    def finishQrP1(self, result):
-        self.fileHandler.writeFile('tourist_solution_output.txt', result)
-        self.checkQrP1();
-    def checkQrP1(self):
-        self.checker('answer/tourist_example_output.txt', 'output/tourist_solution_output.txt')
+    def readInput(self, probName):
+        return self.fileHandler.readFile('input/' + probName + '_example_input.txt')
 
-    # Problem2
-    def prepareQrP2(self):
-        strings = self.fileHandler.readFile('interception_example_input.txt')
-        self.inputParser.parseQrP2(strings)
-        
-    # Problem3
-    def prepareQrP3(self):
-        strings = self.fileHandler.readFile('ethan_searches_for_a_string_example_input.txt')
-        self.inputParser.parseQrP3(strings)
+    def writeOutput(self, probName, result):
+        self.fileHandler.writeFile(probName + '_solution_output.txt', result)
 
-    # Meta utility
+    def checkOutput(self, probName):
+        self.checker(probName + '_example_output.txt', probName + '_solution_output.txt')
+
     def checker(self, answerPath, resultPath):
-        answer = self.fileHandler.readFile(answerPath)
-        result = self.fileHandler.readFile(resultPath)
+        answer = self.fileHandler.readFile('answer/' + answerPath)
+        result = self.fileHandler.readFile('output/' + resultPath)
         print('=ANSWER=')
         print(('\n').join(answer))
         print('=RESULT=')
